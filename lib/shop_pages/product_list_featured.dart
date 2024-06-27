@@ -8,14 +8,14 @@ import 'package:flipkart/global/global_variables.dart';
 import 'package:flipkart/widgets/product_card.dart';
 import 'package:flipkart/shop_pages/product_details_page.dart';
 
-class ProductListClothes extends StatefulWidget {
-  const ProductListClothes({super.key});
+class ProductListFeatured extends StatefulWidget {
+  const ProductListFeatured({super.key});
 
   @override
-  State<ProductListClothes> createState() => _ProductListClothesState();
+  State<ProductListFeatured> createState() => _ProductListFeaturedState();
 }
 
-class _ProductListClothesState extends State<ProductListClothes> {
+class _ProductListFeaturedState extends State<ProductListFeatured> {
   final List<String> filters = const ['Featured','Shoes', 'Electronics', 'Clothes', 'Utensils'];
 
   late String selectedFilter;
@@ -23,7 +23,7 @@ class _ProductListClothesState extends State<ProductListClothes> {
   @override
   void initState() {
     super.initState();
-    selectedFilter = "Clothes";
+    selectedFilter = "Featured";
   }
 
   @override
@@ -45,7 +45,7 @@ class _ProductListClothesState extends State<ProductListClothes> {
               Padding(
                 padding: const EdgeInsets.all(20.0),
                 child: Text(
-                  'Clothes',
+                  'Shoes',
                   style: Theme.of(context).textTheme.titleLarge,
                 ),
               ),
@@ -135,14 +135,14 @@ class _ProductListClothesState extends State<ProductListClothes> {
               builder: (context, constraints) {
                 if (constraints.maxWidth > 1080) {
                   return GridView.builder(
-                    itemCount: clotheproducts.length,
+                    itemCount: shoeproducts.length,
                     gridDelegate:
                         const SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 2,
                       childAspectRatio: 1.75,
                     ),
                     itemBuilder: (context, index) {
-                      final product = clotheproducts[index];
+                      final product = shoeproducts[index];
                       return GestureDetector(
                         onTap: () {
                           Navigator.of(context).push(
@@ -166,9 +166,9 @@ class _ProductListClothesState extends State<ProductListClothes> {
                   );
                 } else {
                   return ListView.builder(
-                    itemCount: clotheproducts.length,
+                    itemCount: featuredproducts.length,
                     itemBuilder: (context, index) {
-                      final product = clotheproducts[index];
+                      final product = featuredproducts[index];
                       return GestureDetector(
                         onTap: () {
                           Navigator.of(context).push(

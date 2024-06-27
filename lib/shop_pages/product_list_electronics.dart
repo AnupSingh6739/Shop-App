@@ -1,5 +1,6 @@
 import 'package:flipkart/shop_pages/clothes_page.dart';
 import 'package:flipkart/shop_pages/electronics_page.dart';
+import 'package:flipkart/shop_pages/featured_page.dart';
 import 'package:flipkart/shop_pages/shoes_page.dart';
 import 'package:flipkart/shop_pages/utensils_page.dart';
 import 'package:flutter/material.dart';
@@ -15,7 +16,7 @@ class ProductListElectronics extends StatefulWidget {
 }
 
 class _ProductListElectronicsState extends State<ProductListElectronics> {
-  final List<String> filters = const ['Shoes', 'Electronics', 'Clothes', 'Utensils'];
+  final List<String> filters = const ['Featured','Shoes', 'Electronics', 'Clothes', 'Utensils'];
 
   late String selectedFilter;
 
@@ -76,6 +77,11 @@ class _ProductListElectronicsState extends State<ProductListElectronics> {
                     onTap: () {
                       if(selectedFilter!=filter){
                       setState(() {
+                          if(filter=="Featured"){
+                            Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>
+                              const FeaturedPage(),
+                            ));
+                          }
                           if(filter=="Electronics"){
                             Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>
                               const ElectronicsPage(),
