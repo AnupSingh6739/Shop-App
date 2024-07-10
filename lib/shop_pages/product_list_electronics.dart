@@ -154,7 +154,7 @@ class _ProductListElectronicsState extends State<ProductListElectronics> {
                           );
                         },
                         child: ProductCard(
-                          title: product['itle'] as String,
+                          title: product['title'] as String,
                           price: product['price'] as double,
                           image: product['imageUrl'] as String,
                           backgroundColor: index.isEven

@@ -1,4 +1,7 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flipkart/User/user_service.dart';
 import 'package:flipkart/firebase_options.dart';
 import 'package:flipkart/pages/auth_page.dart';
 import 'package:flipkart/providers/cart_provider.dart';
@@ -19,9 +22,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-      create: (context) => CartProvider(),
-      child: MaterialApp(
+    return MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Shopping App',
         theme: ThemeData(
@@ -60,7 +61,6 @@ class MyApp extends StatelessWidget {
           useMaterial3: true,
         ),
         home: const AuthPage(),
-      ),
-    );
+      );    
   }
 }

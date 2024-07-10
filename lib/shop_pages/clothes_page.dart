@@ -18,7 +18,7 @@ class _ClothesPageState extends State<ClothesPage> {
   int currentPage=0;
   List<Widget> pages= [
     const ProductListClothes(),
-    const CartPage(),
+    CartPage(),
     const ProfilePage(),
   ];
 

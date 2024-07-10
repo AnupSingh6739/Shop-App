@@ -1,6 +1,8 @@
+import 'package:flipkart/product/product.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../providers/cart_provider.dart';
+import '../User/user_service.dart';
 
 class ProductDetailsPage extends StatefulWidget {
   final Map<String, Object> product;
@@ -17,6 +19,7 @@ class ProductDetailsPage extends StatefulWidget {
 class _ProductDetailsPageState extends State<ProductDetailsPage> {
   int selectedSize = 0;
   String selectedcolor="";
+  final UserService _userService = UserService();
   
   @override
   Widget build(BuildContext context) {
@@ -113,6 +116,7 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
                 Padding(
                   padding: const EdgeInsets.all(13.0),
                   child: ElevatedButton.icon(
+            
                     icon: const Icon(
                       Icons.shopping_cart,
                       color: Colors.black,
@@ -121,37 +125,24 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
                       if (selectedSize != 0 ||
                           selectedcolor != "") {
                         if (selectedSize != 0) {
-                          Provider.of<CartProvider>(context, listen: false)
-                              .addProduct(
-                            {
-                              'id': widget.product['id'],
-                              'title': widget.product['title'],
-                              'price': widget.product['price'],
-                              'imageUrl': widget.product['imageUrl'],
-                              'company': widget.product['company'],
-                              'category':widget.product['category'],
-                              'size': selectedSize,
-                            },
-                          );
+
+                            _userService.addToCart(
+                              Product(id: widget.product['id'].toString(), color:"", size: selectedSize, category: widget.product['category'].toString(), imageUrl: widget.product['imageUrl'].toString(), title: widget.product['title'].toString(), company: widget.product['company'].toString(), price: widget.product['price'] as double)
+                            );
+                            print(UserService);
+                        
                           ScaffoldMessenger.of(context).showSnackBar(
                             const SnackBar(
                               content: Text('Product Added Successfully'),
                             ),
                           );
                         }
+                        
                         else{
-                          Provider.of<CartProvider>(context, listen: false)
-                              .addProduct(
-                            {
-                              'id': widget.product['id'],
-                              'title': widget.product['title'],
-                              'price': widget.product['price'],
-                              'imageUrl': widget.product['imageUrl'],
-                              'company': widget.product['company'],
-                              'category':widget.product['category'],
-                              'color': selectedcolor,
-                            },
-                          );
+                          _userService.addToCart(
+                              Product(id: widget.product['id'].toString(), color:selectedcolor, size:0, category: widget.product['category'].toString(), imageUrl: widget.product['imageUrl'].toString(), title: widget.product['title'].toString(), company: widget.product['company'].toString(), price: widget.product['price'] as double)
+                            );
+                        
                           ScaffoldMessenger.of(context).showSnackBar(
                             const SnackBar(
                               content: Text('Product Added Successfully'),

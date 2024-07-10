@@ -7,6 +7,7 @@ final featuredproducts = [
     'company': 'Levi\'s',
     'sizes': [36, 38, 40],
     'category':'clothes',
+    'colors':[],
   },
   {
     'id': '1',
@@ -16,6 +17,7 @@ final featuredproducts = [
     'company': 'Nike',
     'sizes': [9, 10, 11, 12],
     'category':'shoes',
+    'colors':[],
   },
   {
     'id': '2',
@@ -25,6 +27,7 @@ final featuredproducts = [
     'company': 'Chammach Katori',
     'sizes': [8, 9, 10],
     'category':'utensils',
+    'colors':[],
   },
   {
     'id': '3',
@@ -34,7 +37,7 @@ final featuredproducts = [
     'company': 'Samsung',
     'category':'electronics',
     'colors': ['Black', 'White', 'Blue', 'Silver'],
-    'sizes': [9, 10, 11, 12],
+    'sizes': [],
   },
   {
     'id': '4',
@@ -44,6 +47,7 @@ final featuredproducts = [
     'company': 'Nike',
     'sizes': [8, 9, 10],
     'category':'shoes',
+    'colors':[],
   },
   {
     'id': '5',
@@ -53,6 +57,7 @@ final featuredproducts = [
     'company': 'Pigeon',
     'sizes': [9, 10, 11, 12],
     'category':'utensils',
+    'colors':[],
   },
   {
     'id': '6',
@@ -62,7 +67,7 @@ final featuredproducts = [
     'company': 'HP',
     'colors': ['Black', 'White', 'Grey'],
     'category':'electronics',
-    'sizes': [9, 10, 11, 12],
+    'sizes': [],
   },
 ];
 
@@ -75,6 +80,7 @@ final shoeproducts = [
     'company': 'Nike',
     'sizes': [9, 10, 11, 12],
     'category':'shoes',
+    'colors':[],
   },
   {
     'id': '1',
@@ -84,6 +90,7 @@ final shoeproducts = [
     'company': 'Adidas',
     'sizes': [9, 10, 12],
     'category':'shoes',
+    'colors':[],
   },
   {
     'id': '2',
@@ -93,6 +100,7 @@ final shoeproducts = [
     'company': 'Bata',
     'sizes': [8, 9, 10],
     'category':'shoes',
+    'colors':[],
   },
   {
     'id': '3',
@@ -102,6 +110,7 @@ final shoeproducts = [
     'company': 'Nike',
     'sizes': [8, 9, 10],
     'category':'shoes',
+    'colors':[],
   },
 ];
 
@@ -114,6 +123,7 @@ final clotheproducts = [
     'company': 'Zara',
     'sizes': [34, 36, 38, 40],
     'category':'clothes',
+    'colors':[],
   },
   {
     'id': '1',
@@ -123,6 +133,7 @@ final clotheproducts = [
     'company': 'Levi\'s',
     'sizes': [36, 38, 40],
     'category':'clothes',
+    'colors':[],
   },
   {
     'id': '2',
@@ -132,6 +143,7 @@ final clotheproducts = [
     'company': 'Wrogn',
     'sizes': [34, 36, 40],
     'category':'clothes',
+    'colors':[],
   },
   {
     'id': '3',
@@ -141,6 +153,7 @@ final clotheproducts = [
     'company': 'Lee',
     'sizes': [30, 34, 36],
     'category':'clothes',
+    'colors':[],
   },
 ];
 
@@ -153,7 +166,7 @@ final electronicproducts = [
     'company': 'Samsung',
     'category':'electronics',
     'colors': ['Black', 'White', 'Blue', 'Silver'],
-    'sizes': [9, 10, 11, 12],
+    'sizes':[],
   },
   {
     'id': '1',
@@ -163,7 +176,7 @@ final electronicproducts = [
     'company': 'Apple',
     'category':'electronics',
     'colors': ['Black', 'White', 'Blue', 'Pink'],
-    'sizes': [9, 10, 11, 12],
+    'sizes':[],
   },
   {
     'id': '2',
@@ -173,7 +186,7 @@ final electronicproducts = [
     'company': 'HP',
     'colors': ['Black', 'White', 'Grey'],
     'category':'electronics',
-    'sizes': [9, 10, 11, 12],
+    'sizes':[],
   },
   {
     'id': '3',
@@ -183,7 +196,7 @@ final electronicproducts = [
     'company': 'Usha',
     'colors': ['Black', 'White', 'Blue'],
     'category':'electronics',
-    'sizes': [9, 10, 11, 12],
+    'sizes':[],
   },
 ];
 
@@ -196,6 +209,7 @@ final utensilproducts = [
     'company': 'Pigeon',
     'sizes': [9, 10, 11, 12],
     'category':'utensils',
+    'colors':[],
   },
   {
     'id': '1',
@@ -205,6 +219,7 @@ final utensilproducts = [
     'company': 'Nayasa',
     'sizes': [9, 10, 12],
     'category':'utensils',
+    'colors':[],
   },
   {
     'id': '2',
@@ -214,6 +229,7 @@ final utensilproducts = [
     'company': 'Chammach Katori',
     'sizes': [8, 9, 10],
     'category':'utensils',
+    'colors':[],
   },
   {
     'id': '3',
@@ -223,6 +239,7 @@ final utensilproducts = [
     'company': 'Chammach Kartori',
     'sizes': [8, 9, 10],
     'category':'utensils',
+    'colors':[],
   },
 ];
 

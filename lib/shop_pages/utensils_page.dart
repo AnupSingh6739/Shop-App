@@ -18,7 +18,7 @@ class _UtensilsPageState extends State<UtensilsPage> {
   int currentPage=0;
   List<Widget> pages= [
     const ProductListUtensils(),
-    const CartPage(),
+    CartPage(),
     const ProfilePage(),
   ];
 

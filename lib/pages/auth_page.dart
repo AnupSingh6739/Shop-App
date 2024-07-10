@@ -1,5 +1,4 @@
 import 'package:flipkart/shop_pages/featured_page.dart';
-import 'package:flipkart/shop_pages/shoes_page.dart';
 import 'package:flipkart/pages/login_register_page.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';

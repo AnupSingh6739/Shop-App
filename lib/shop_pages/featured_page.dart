@@ -18,7 +18,7 @@ class _FeaturedPageState extends State<FeaturedPage> {
   int currentPage=0;
   List<Widget> pages= [
     const ProductListFeatured(),
-    const CartPage(),
+    CartPage(),
     const ProfilePage(),
   ];
 
